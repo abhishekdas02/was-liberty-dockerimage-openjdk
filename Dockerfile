@@ -5,10 +5,10 @@ RUN yum install -y  unzip \
 && yum install java-1.7.0-openjdk.x86_64 -y \
 && yum clean all \
 && mkdir -p /tmp/ /opt/ibm/java
-ADD ./java/ibm-java-i386-jre-8.0-5.17.bin /tmp/ibm-java-i386-jre-8.0-5.17.bin
-ADD ./installer/wlp-webProfile8-18.0.0.2.zip /tmp/wlp-webProfile8-18.0.0.2.zip
 
-RUN unzip /tmp/wlp-webProfile8-18.0.0.2.zip -d /opt/ibm
+ADD ./installer/wlp-*.zip /tmp/wlp.zip
+
+RUN unzip /tmp/wlp.zip -d /opt/ibm
 ENV PATH /opt/ibm/wlp/bin:$PATH
 ENV LOG_DIR /logs
 ENV WLP_OUTPUT_DIR /opt/ibm/wlp/output
