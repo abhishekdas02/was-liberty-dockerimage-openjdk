@@ -22,6 +22,6 @@ RUN mkdir /logs \
 
 COPY server.xml /opt/ibm/wlp/usr/servers/defaultServer/
 
-EXPOSE 9080 9443
+EXPOSE 9090 9443
 
 CMD ["/opt/ibm/wlp/bin/server", "run", "defaultServer"]
