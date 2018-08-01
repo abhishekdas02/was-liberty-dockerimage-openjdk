@@ -1,5 +1,5 @@
 FROM centos:latest
-LABEL maintainer="Abhishek Das <Abhishek_Das12@Infosys.com> (GitHub: @abishekdas02)"
+LABEL maintainer="Abhishek Das <Abhishek_Das12@Infosys.com> (GitHub: @abhishekdas02)"
 
 RUN yum install -y  unzip \
 && yum install java-1.7.0-openjdk.x86_64 -y \
